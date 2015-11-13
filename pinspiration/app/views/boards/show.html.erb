@@ -1,5 +1,5 @@
 <h1><%= @board.name %></h1>
-<%= link_to "add pin (+), ", new_board_pin_path(@board) %><%= link_to "edit this board", edit_board_path(@board) %>
+<%= link_to "Add pin (+) <i class='fa fa-thumb-tack'></i>".html_safe, new_board_pin_path(@board) %><%= link_to "edit this board", edit_board_path(@board) %>
 
 <h2><%= @board.description %></h2>
 
