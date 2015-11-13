@@ -1,4 +1,6 @@
-<h1> HEllO </h1>
+<h2>My Boards:</h2>
 
-<p>Add path for new pin</p>
-<p>Add path to display pins </p>
+  <% @boards.each do |board| %>
+  <h1><%= link_to(board.name, board) %><h1>
+  <div class='image'><%= image_tag(board.photo_url, class: "cover-photo") %></div>
+  <% end %>
