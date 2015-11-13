@@ -19,7 +19,7 @@ class PinsController < ApplicationController
   def create
     @board = Board.find(params[:board_id])
     @pin = @board.pins.create!(pin_params.merge(user: current_user))
-    redirect_to board_path(@board)
+    redirect_to board_path(@board), notice: "#{@pin.title} was successfully created!"
   end
 
   def show
