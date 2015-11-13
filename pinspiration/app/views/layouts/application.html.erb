@@ -4,17 +4,19 @@
   <title>Pinspiration</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One|Josefin+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1><%= link_to 'Pinspiration!', boards_path %></h1>
   <nav>
-    <h2><%= link_to 'Boards', boards_path %></h2>
-    <%= link_to "New Board (+)", new_board_path() %>
+    <p><%= link_to 'Boards', boards_path %></p>
+    <p><%= link_to "New Board (+)", new_board_path() %></p>
     <% if current_user %>
-    <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+    <p><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></p>
     <% else %>
-    <h3><%= link_to 'Signup', new_user_registration_path %></h3>
-    <h3><%= link_to 'Login', new_user_session_path %></h3>
+    <p><%= link_to 'Signup', new_user_registration_path %></p>
+    <p><%= link_to 'Login', new_user_session_path %></p>
     <% end %>
   </nav>
 
