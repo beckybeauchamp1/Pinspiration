@@ -8,8 +8,8 @@
 </head>
 <body>
   <nav>
-    <h2><%= link_to 'Pins', pins_path %></h2>
-    <%= link_to "New Pin (+)", new_pin_path() %>
+    <h2><%= link_to 'Boards', boards_path %></h2>
+    <%= link_to "New Board (+)", new_board_path() %>
     <% if current_user %>
     <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
     <% else %>
