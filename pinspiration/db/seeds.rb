@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Pin.create([{title: "First Pin", photo_url: 'https://snap-photos.s3.amazonaws.com/img-thumbs/960w/U2HE5FVLQ0.jpg', description: "I love this photo!"}])

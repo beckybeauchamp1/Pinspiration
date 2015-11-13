@@ -1,0 +1,6 @@
+<h2>Recent Pins:</h2>
+
+  <% @pins.each do |pin| %>
+  <h1><%= link_to(pin.title, pin) %><h1>
+  <%= image_tag(pin.photo_url, class: "cover-photo") %>
+  <% end %> 

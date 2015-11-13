@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20151113142309) do
   create_table "pins", force: :cascade do |t|
     t.string  "title"
     t.string  "photo_url"
+    t.string  "description"
     t.integer "user_id"
   end
 
