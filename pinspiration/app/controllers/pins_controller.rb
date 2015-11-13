@@ -14,12 +14,14 @@ class PinsController < ApplicationController
   def new
       @board = Board.find(params[:board_id])
       @pin = Pin.new
+      @tag = Tag.all
   end
 
   def create
     @board = Board.find(params[:board_id])
+    @tag = Tag.all
     @pin = @board.pins.create!(pin_params.merge(user: current_user))
-    redirect_to board_path(@board)
+    redirect_to board_path(@board), notice: "#{@pin.title} was successfully created!"
   end
 
   def show
@@ -29,11 +31,14 @@ class PinsController < ApplicationController
 
   def edit
     @board = Board.find(params[:board_id])
+    @tags = Tag.all
+    @tag
     # @pin  = Pin.find(params[:id])
   end
 
   def update
     # @pin = Pin.find(params[:id])
+    @tag = Tag.all
     @board = Board.find(params[:board_id])
     @pin.update(pin_params.merge(user: current_user))
     redirect_to board_pin_path(@board, @pin)

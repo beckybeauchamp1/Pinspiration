@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.create(board_params.merge(user: current_user))
-    redirect_to boards_path(@board, @user)
+    redirect_to boards_path(@board, @user), notice: "#{@board.name} was successfully created!"
   end
 
   def show
