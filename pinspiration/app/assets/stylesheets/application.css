@@ -1,9 +1,115 @@
-.pin-photo{
-  max-width: 400px;
+* {
+  box-sizing: border-box;
+  justify-content: center;
+  text-decoration: none;
 }
 
-p{
-  font-family: sans-serif;
+body {
+font-family: sans-serif;
+text-align: center;
+color: black;
+background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+}
+.logo {
+  position: relative;
+  max-width: 400px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 100%;
+}
+
+.image {
+  justify-content: center;
+  padding: 1px;
+  margin: 10px auto;
+  max-width: 800px;
+}
+
+.pin-photo {
+  padding: 1px;
+  margin: 10px auto;
+  max-width: 800px;
+}
+
+.cover-photo {
+  justify-content: center;
+  padding: 1px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+li {
+  text-align: left;
+  margin: 60px;
+  padding: 15px;
+}
+nav {
+  background: rgba(162, 93, 92, 0.6);
+  text-align: center;
+  padding: 10px;
+}
+
+form {
+  background: rgba(27, 111, 165, 0.4);
+  text-align: center;
+  padding: 10px;
+}
+
+.background {
+  background: rgba(27, 111, 165, 0.4);
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  padding: 20px;
+  color: rgba(27, 111, 165);
+  font-family: 'Poiret One', cursive;
+  font-size: 48px;
+  text-align: center;
+}
+a:link { /* Essentially means a[href], or that the link actually goes somewhere */
   color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: sienna;
+}
+a:active {
+  color: blue;
+}
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 30px;
+  text-align: center;
+  padding: 10px;
+}
+button {
+  background-color: darkblue;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  padding: 5px;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  margin: 40px; auto;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  text-align: left;
+  margin: 40px; auto;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  padding: 5px;
+  font-size: 20px;
+  margin: 70px;
+  padding: 15px;
 }
