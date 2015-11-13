@@ -1,1 +1,13 @@
-<h1>Display all boards associated wtih user</h1>
+<h1><%= @board.name %></h1>
+<%= link_to "add pin (+)", new_board_pin_path(@board) %>
+<h2><%= @board.description %></h2>
+
+
+<%= image_tag(@board.photo_url, class: "pin-photo") %>
+
+<div>
+  <% @board.pins.each do |pin| %>
+  <h1><%= link_to(pin.title, board_pin_path(@board, pin)) %><h1>
+  <%= image_tag(pin.photo_url, class: "cover-photo") %>
+  <% end %>
+</div>

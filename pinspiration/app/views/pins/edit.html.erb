@@ -2,6 +2,6 @@
 
 <%= render "form" %>
 
-<%= form_for @pin, method: "delete" do |f| %>
+<%= form_for [@board, @pin], method: "delete" do |f| %>
 <%= f.submit "Delete Pin", class: "delete" %>
 <% end %>
